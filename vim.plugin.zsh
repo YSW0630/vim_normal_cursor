@@ -27,8 +27,8 @@ zle-line-init() {
     echo -ne "\e[1 q"
 }
 zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+# echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[1 q' ;} # Use beam shape cursor for each new prompt.
 
 # emacs like keybindings
 bindkey -M viins '^A' beginning-of-line 
